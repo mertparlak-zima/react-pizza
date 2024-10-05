@@ -1,9 +1,14 @@
 import MyHeader from "./MyHeader";
 import CartOverView from "../cart/CartOverview";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
+import Loader from "./Loader";
 function AppLayout() {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
   return (
-    <div>
+    <div className="layout">
+      {isLoading && <Loader />}
       <MyHeader />
       <main>
         {/* The Outlet component is a placeholder for the child routes of the
