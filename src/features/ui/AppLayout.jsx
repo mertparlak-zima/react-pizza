@@ -7,15 +7,17 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div className="layout">
+    <div className="grid h-screen grid-rows-[auto_1fr_auto] bg-red-50">
       {isLoading && <Loader />}
       <MyHeader />
-      <main>
-        {/* The Outlet component is a placeholder for the child routes of the
+      <div className="overflow-scroll">
+        <main className="mx-auto max-w-3xl">
+          {/* The Outlet component is a placeholder for the child routes of the
         current route. The child routes are rendered inside the Outlet
         component. */}
-        <Outlet />
-      </main>
+          <Outlet />
+        </main>
+      </div>
       <CartOverView />
     </div>
   );
