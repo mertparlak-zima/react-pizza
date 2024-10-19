@@ -9,7 +9,7 @@ function MyHeader() {
         Fast React Pizza Co.
       </Link>
       <SearchOrder />
-      <Username username="Mert" />
+      <Username />
     </header>
   );
 }
