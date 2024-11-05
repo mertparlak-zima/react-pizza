@@ -60,3 +60,7 @@ export const getTotalCartQuantity = (state) =>
 
 export const getTotalCartPrice = (state) =>
   state.cart.cart.reduce((acc, item) => acc + item.totalPrice, 0);
+
+export const getAllCart = (state) => state.cart.cart;
+
+export const getUser = (state) => state.user;
