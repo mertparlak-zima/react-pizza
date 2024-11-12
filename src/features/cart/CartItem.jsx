@@ -1,5 +1,5 @@
 import { formatCurrency } from "../utils/helpers";
-import DeleteItem from "./deleteItem";
+import DeleteItem from "./DeleteItem";
 
 function CartItem({ item }) {
   const { name, quantity, totalPrice } = item;
